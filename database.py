@@ -1,9 +1,10 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:mypassword@localhost/mydatabase"
+# "postgresql://<username>:<password>@<ip-address/hostname>/<database_name>"
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1212759382@localhost/fastapi"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
@@ -18,3 +19,5 @@ def get_db():
         yield db
     finally:
         db.close()
+
+

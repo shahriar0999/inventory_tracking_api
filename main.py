@@ -1,9 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
-import routers.product as product
-import routers.inventory as inventory
+from routers import product, inventory
 import models
-from database import engine
+from database import engine, get_db
 
 
 models.Base.metadata.create_all(bind=engine)

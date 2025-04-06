@@ -2,7 +2,7 @@ from pydantic import BaseModel, EmailStr
 
 
 class ProductBase(BaseModel):
-    id: str
+    # id: int
     name: str
     category: str
     quantity: int
